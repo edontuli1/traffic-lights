@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/toni/traffic_lights/traffic_lights.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+/home/toni/traffic_lights/traffic_lights.srcs/sim_1/new/tf_tb.v,1677630694,verilog,,,,tf_tb,,,,,,,,
+/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/traffic_lights.v,1677623110,verilog,,/home/toni/traffic_lights/traffic_lights.srcs/sim_1/new/tf_tb.v,,traffic_lights,,,,,,,,

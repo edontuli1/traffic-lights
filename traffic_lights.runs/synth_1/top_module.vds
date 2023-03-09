@@ -1,0 +1,304 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Mar  9 14:48:45 2023
+# Process ID: 21031
+# Current directory: /home/toni/traffic_lights/traffic_lights.runs/synth_1
+# Command line: vivado -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+# Log file: /home/toni/traffic_lights/traffic_lights.runs/synth_1/top_module.vds
+# Journal file: /home/toni/traffic_lights/traffic_lights.runs/synth_1/vivado.jou
+# Running On: toni-ubuntu, OS: Linux, CPU Frequency: 3422.646 MHz, CPU Physical cores: 4, Host memory: 16631 MB
+#-----------------------------------------------------------
+source top_module.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/toni/traffic_lights/traffic_lights.srcs/utils_1/imports/synth_1/traffic_lights.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/toni/traffic_lights/traffic_lights.srcs/utils_1/imports/synth_1/traffic_lights.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_module -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21060
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'state' is not allowed [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/traffic_lights.v:43]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1953.461 ; gain = 374.738 ; free physical = 8872 ; free virtual = 12814
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2974.887; parent = 1953.465; children = 1021.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_module' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/top_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'traffic_lights' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/traffic_lights.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'traffic_lights' (0#1) [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/traffic_lights.v:24]
+INFO: [Synth 8-6157] synthesizing module 'states' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/states.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/states.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'states' (0#1) [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/states.v:23]
+INFO: [Synth 8-6157] synthesizing module 'slow_clock' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/slow_clock.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'slow_clock' (0#1) [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/slow_clock.v:23]
+INFO: [Synth 8-6157] synthesizing module 'decoder' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/decoder.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'decoder' (0#1) [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/decoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (0#1) [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/top_module.v:23]
+WARNING: [Synth 8-7137] Register count_one_reg in module traffic_lights has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/traffic_lights.v:47]
+WARNING: [Synth 8-7137] Register state_reg in module traffic_lights has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/traffic_lights.v:51]
+WARNING: [Synth 8-7129] Port clk in module states is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2019.430 ; gain = 440.707 ; free physical = 8959 ; free virtual = 12902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3040.855; parent = 2019.434; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2037.242 ; gain = 458.520 ; free physical = 8959 ; free virtual = 12902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3058.668; parent = 2037.246; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2037.242 ; gain = 458.520 ; free physical = 8959 ; free virtual = 12902
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3058.668; parent = 2037.246; children = 1021.422
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2037.242 ; gain = 0.000 ; free physical = 8956 ; free virtual = 12899
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/toni/traffic_lights/traffic_lights.srcs/constrs_1/new/traffic_lights_con.xdc]
+Finished Parsing XDC File [/home/toni/traffic_lights/traffic_lights.srcs/constrs_1/new/traffic_lights_con.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/toni/traffic_lights/traffic_lights.srcs/constrs_1/new/traffic_lights_con.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2182.992 ; gain = 0.000 ; free physical = 8868 ; free virtual = 12811
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2182.992 ; gain = 0.000 ; free physical = 8868 ; free virtual = 12811
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8943 ; free virtual = 12885
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8942 ; free virtual = 12885
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8942 ; free virtual = 12885
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/states.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'an_reg' [/home/toni/traffic_lights/traffic_lights.srcs/sources_1/new/decoder.v:31]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8921 ; free virtual = 12865
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	  10 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 6     
+	   3 Input    5 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 2     
+	   6 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (L4/an_reg[3]) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (L4/an_reg[0]) is unused and will be removed from module top_module.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8915 ; free virtual = 12862
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1369.791; parent = 1163.887; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8803 ; free virtual = 12750
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1470.483; parent = 1264.642; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1470.933; parent = 1265.091; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.167; parent = 1265.325; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.339; parent = 1265.497; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.354; parent = 1265.513; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.354; parent = 1265.513; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.433; parent = 1265.591; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.433; parent = 1265.591; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.448; parent = 1265.606; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     7|
+|3     |LUT1   |     3|
+|4     |LUT2   |     7|
+|5     |LUT3   |     7|
+|6     |LUT4   |     1|
+|7     |LUT5   |     1|
+|8     |LUT6   |    12|
+|9     |FDCE   |     1|
+|10    |FDPE   |     2|
+|11    |FDRE   |    30|
+|12    |LD     |     8|
+|13    |IBUF   |     2|
+|14    |OBUF   |    19|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8795 ; free virtual = 12742
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1471.479; parent = 1265.638; children = 205.904
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3172.402; parent = 2150.980; children = 1021.422
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2182.992 ; gain = 458.520 ; free physical = 8846 ; free virtual = 12793
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2182.992 ; gain = 604.270 ; free physical = 8846 ; free virtual = 12793
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2182.992 ; gain = 0.000 ; free physical = 8950 ; free virtual = 12897
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2182.992 ; gain = 0.000 ; free physical = 8906 ; free virtual = 12853
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  LD => LDCE: 8 instances
+
+Synth Design complete, checksum: 8c59deb0
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 2182.992 ; gain = 905.465 ; free physical = 9111 ; free virtual = 13058
+INFO: [Common 17-1381] The checkpoint '/home/toni/traffic_lights/traffic_lights.runs/synth_1/top_module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  9 14:49:22 2023...
